@@ -1,0 +1,45 @@
+.title {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.list {
+    /* background-color: rgb(225, 212, 225); */
+    height: 100%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    overflow: scroll;
+}
+
+.item {
+    background-color: rgb(225, 212, 225);
+    border-radius: 15px;
+    display: flex;
+    padding: 10px;
+    font-size: 12px;
+    position: relative;
+}
+
+.delete {
+ position: absolute;
+ right: 0;
+ top: 0;
+ bottom: 0;
+ border: none;
+ border-radius: 0 15px 15px 0;
+}
+
+.delete:hover {
+    background-color: rgb(124, 51, 118);
+    color: white;
+}
+
+.no_contacts {
+    color: rgba(255, 255, 255, 0.584);
+    text-align: center;
+}

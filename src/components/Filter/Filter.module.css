@@ -1,0 +1,21 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+}
+
+.text {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.input{
+    outline: none;
+    background-color: white;
+    border: 1px solid rgba(124, 51, 118, 0.617);
+    border-radius: 15px;
+    padding: 2px 5px;
+    padding-left: 10px;
+    color: rgba(124, 51, 118, 0.617);
+}
