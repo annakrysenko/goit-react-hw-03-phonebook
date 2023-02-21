@@ -6,7 +6,7 @@ const ContactsList = ({ showFilteredContacts, OnClickDelete, title }) => {
     <>
       <h2 className={styles.title}>{title}</h2>
       <ul className={styles.list}>
-        {showFilteredContacts.length ? (
+        {showFilteredContacts ? (
           showFilteredContacts.map(contact => (
             <li key={contact.id} className={styles.item}>
               <p>
