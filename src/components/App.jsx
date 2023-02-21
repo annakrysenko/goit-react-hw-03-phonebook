@@ -41,9 +41,13 @@ export class App extends Component {
   };
 
   showFilteredContacts = () => {
-    return this.state.contacts.filter(contact =>
-      contact.name.toLowerCase().includes(this.state.filter.toLocaleLowerCase())
-    );
+    if (this.state.contacts.length > 0) {
+      return this.state.contacts.filter(contact =>
+        contact.name
+          .toLowerCase()
+          .includes(this.state.filter.toLocaleLowerCase())
+      );
+    }
   };
 
   OnClickDelete = id => {
