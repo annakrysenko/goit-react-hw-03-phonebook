@@ -16,9 +16,11 @@ export class App extends Component {
 
   componentDidMount() {
     const contactsLocal = JSON.parse(localStorage.getItem('contacts'));
-    this.setState(prevProps => {
-      return { contacts: contactsLocal };
-    });
+    if (contactsLocal) {
+      this.setState(prevProps => {
+        return { contacts: contactsLocal };
+      });
+    }
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -41,14 +43,9 @@ export class App extends Component {
   };
 
   showFilteredContacts = () => {
-    if (this.state.contacts.length > 0) {
-      return this.state.contacts.filter(contact =>
-        contact.name
-          .toLowerCase()
-          .includes(this.state.filter.toLocaleLowerCase())
-      );
-    }
-    return;
+    return this.state.contacts.filter(contact =>
+      contact.name.toLowerCase().includes(this.state.filter.toLocaleLowerCase())
+    );
   };
 
   OnClickDelete = id => {
