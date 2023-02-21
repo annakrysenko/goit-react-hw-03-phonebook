@@ -48,6 +48,7 @@ export class App extends Component {
           .includes(this.state.filter.toLocaleLowerCase())
       );
     }
+    return;
   };
 
   OnClickDelete = id => {
