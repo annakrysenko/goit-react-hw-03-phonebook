@@ -8,12 +8,13 @@
 
 .list {
     /* background-color: rgb(225, 212, 225); */
+    padding: 5px;
     height: 100%;
     color: black;
     display: flex;
     flex-direction: column;
     row-gap: 5px;
-    overflow: scroll;
+    overflow-y: auto;
 }
 
 .item {
